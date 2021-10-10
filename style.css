@@ -1,0 +1,333 @@
+/* ------------------------------------------------ < GENERAL OF PAGE > -------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    background-image: linear-gradient(#30375F,#595F7E);
+    height: 93vh;
+}
+
+:root{
+    --white: #fff;
+    --Dark-gray:rgba(255,255,255,.3);
+    --blue-color:#1059FF;
+    --white-gray:rgba(255,255,255,0.7);
+
+}
+
+.pd-10{
+    padding: 10px 0;
+}
+
+.link{
+    text-decoration: none;
+    color:var(--Dark-gray)
+}
+.active-link{
+    color: var(--white);
+    border-bottom: 2px solid var(--blue-color);
+    padding-bottom: 20px;
+    transition: all .3s;
+}
+
+li{
+    list-style: none;
+}
+
+
+/*  ---------------------------------------------------------------------------- < THE CONTAINER > ---------------------------------------------------------------------------- */
+
+.container{
+    position: relative;
+    width: 430px;
+    height: 600px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 5px 2px 10px rgba(255,255,255,.1) inset ;
+    overflow: hidden;
+    background-image: linear-gradient(#595F7E,#30375F);
+    background-image: -webkit-linear-gradient(#595F7E,#30375F);
+    background-image: -o-linear-gradient(#595F7E,#30375F);
+    background-image: -moz-linear-gradient(#595F7E,#30375F);
+
+}
+
+
+/*  ------------------------------------------------------------------------ < Sign in DIV > --------------------------------------------------------------------- */
+
+.sign-div{
+    position: relative;
+    width: 100%;
+    height: 465px;
+}
+
+
+/*  ------------------------------------------------------------------------ < Sign  DIV > --------------------------------------------------------------------- */
+.sign-in-page{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition:  ease-out  .5s;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+/*  ------------------------------------------------------------------------ < CHILDREN DIV HEADER > --------------------------------------------------------------------- */
+
+header{
+    height:135px;
+}
+
+.register-nav{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.register-nav  li{
+    height: 40px;
+    float: left;
+    line-height: 135px;
+    padding-right: 20px ;
+    font-size: 18px;
+}
+
+
+/*  ------------------------------------------------------------------------ < CHILDREN DIV Form > --------------------------------------------------------------------- */
+
+form{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-list{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-list label{
+    color: var(--Dark-gray);
+    padding-left: 8px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--white-gray);
+}
+
+.register-list .input{
+    height: 35px;
+    padding: 8px;
+    background-color: var(--Dark-gray);
+    border: hidden;
+    border-radius: 17px;
+    margin-bottom: 25px;
+    transition: ease-out .5s;
+    color: var(--white-gray);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.register-list .input:focus {
+    outline: none;
+    background-color:rgba(255,255,255,0.4);
+}
+
+
+.checkbox{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+input[type="checkbox"]{
+    visibility: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.switch-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-btn:before{
+    position: absolute; 
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 5.5px;
+    left: 4px;
+    border-radius: 15px;
+    background-color: var(--white);
+    transition: all 0.4s;
+}
+
+.switch-btn {
+    border-radius: 34px;
+}
+
+.switch-btn:before {
+    border-radius: 50%;
+}
+
+.btn:checked + .switch-btn{
+    background-color: var(--blue-color);
+}
+
+.btn:checked + .switch-btn:before{
+    left:35px;
+}
+
+.checkbox-label{
+    position: relative;
+    padding-left: 15px;
+    top: 5px;
+    font-size: 15px;
+    color: var(--white-gray);
+    
+
+}
+
+
+
+
+input[type="submit"]{
+    margin: 15px 0;
+    height: 35px;
+    border-radius: 18px;
+    background-color: var(--blue-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-style: hidden;
+    transition: all .5s;
+}
+
+input[type="submit"]:focus{
+    outline: none;
+}
+input[type="submit"]:hover{
+    background-color: rgba(0,0,255,.9);
+}
+
+
+/*  ------------------------------------------------------------------------ < CHILD FOOTER > --------------------------------------------------------------------- */
+
+footer{
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    grid: ftr;
+    border-top: 1px solid var(--Dark-gray); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    text-transform:capitalize ;
+} 
+
+.forget{
+    cursor: pointer;
+}
+
+/*  ------------------------------------------------------------------------ < SING UP PAGE > --------------------------------------------------------------------- */
+
+.sing-up-page{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition:  ease-out  .5s;
+    transform: translateX(430px);
+    opacity: 1;
+}
+
+/*  ------------------------------------------------------------------------ < SIGN UP FORM > --------------------------------------------------------------------- */
+
+.sign-up-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sign-up-inputs div{
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sign-up-inputs div label{
+    color: var(--white-gray);
+    padding-left: 12px;
+    font-size: 13px;
+}
+
+.sign-up-inputs div input{
+    height: 33px;
+    border: hidden;
+    border-radius: 15px;
+    background-color: var(--Dark-gray);
+    padding-left: 8px;
+    transition: all .5s;
+    color: var(--white-gray);
+    font-weight: bold;
+}
+input[type=password]{
+    letter-spacing: 1px;
+}
+
+
+.sign-up-inputs div input:focus{
+    outline: none;
+    background-color: rgba(255,255,255,0.4);
+    
+}
+
+.submit{
+    display: flex;
+}
+
+.input-submit{
+    flex-grow: 1;
+    font-size: 15PX;
+    padding-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

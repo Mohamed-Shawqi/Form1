@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <ul class="register-nav">
+                <li class="sign-in-btn "><a class="link active-link" id="sign-in-btn" href="#">sign in</a></li>
+                <li class="sign-up-btn "><a class="link" id="sign-up-btn" href="#">sign up</a></li>
+            </ul>
+        </header>
+       <div class="sign-div">
+            <div class="sign-in-page" id="sign-in-page">
+
+                    <form action="" class="pd-10">
+                        <div class="register-list">
+                            <label class="username-label" for="username" >username</label>
+                            <input class="username-input input" type="email"    placeholder="" name="username">
+                            <label class="password-label" for="password">password</label>
+                            <input class="password-input input" type="password" placeholder="" name="password">
+                        </div>
+
+                        <div class="remember-section pd-10">
+                            <label class="checkbox">
+                                <input type="checkbox" class="btn" checked />
+                                <span class="switch-btn"></span>
+                            </label>
+                            <label for="checkbox-label" class="checkbox-label"> Keep me sign in.</label>
+                        </div>
+
+                        <input type="submit" value="SIGN IN" name="submit">
+                        
+                    </form>
+
+                    <footer>
+                        <span><a class="forget link"> Forget my password..? </a></span>
+                    </footer>
+            
+            </div>
+
+            <div class="sing-up-page" id="sign-up-page">
+            
+                <form action="" >
+                    
+                    <div class="sign-up-inputs">
+                        <div class="username">
+                            <label class="label" for="username"> Full name</label>
+                            <input type="text" class="input-sign-up"  name="username"/>
+                        </div>
+                        <div class="Email">
+                            <label for="email" class="label">Email</label>
+                            <input type="email" class="input-sign-up"  name="email"/>
+                        </div>
+                        <div class="password">
+                            <label for="password" class="label">password</label>
+                            <input type="password" class="input-sign-up"  name="password"/>
+                        </div>
+                        <div class="password">
+                            <label for="email" class="label">Confirm password</label>
+                            <input type="password" class="input-sign-up"  name="confirm-password"/>
+                        </div>
+                    </div>
+                    
+                    <div class="submit">
+                        <input type="submit" class="input-submit" value="SIGN UP"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
